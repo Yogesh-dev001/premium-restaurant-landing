@@ -1,0 +1,257 @@
+html, body{
+   background-color: black;
+   color: white;
+ }
+ *{
+   margin: 0;
+   padding: 0;
+ }
+ section{
+        
+display: grid;
+       
+grid-template-rows:10% 55% 45% 5%;
+ grid-template-columns: 25% 25% 25% 25%;
+   grid-template-areas: 
+   "header header header header"
+ "upper upper upper upper"
+   "lower lower lower lower"
+  "bottom bottom bottom bottom"
+       ;
+ }
+.header{
+  grid-area: header;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+  width: 100%;
+
+}
+ .upper{
+   grid-area: upper;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 32px;
+    padding: 32px;
+    height: 90%;
+    width: 80%; 
+   margin-left: 45px;
+ }
+ .image{
+   
+   height: 80%;
+   width: 100%;
+  border-radius: 23px;  
+  display: flex;
+  flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   justify-self: center;
+   font-size: small;
+   background: rgba(255, 255, 255, 0.08);
+   backdrop-filter:blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+
+ }
+ .image:hover{
+  border-color: rgb(237, 112, 40);
+  box-shadow:inset 0 0 20px rgba(255, 179, 0, 0.2);
+ }
+
+ .image img{
+    height: 70%;
+   
+ }
+  .para{
+    color: grey;
+  }
+  .dash{
+    color: rgb(237, 112, 40);
+
+  }
+  .price{
+    color:rgb(237, 112, 40);
+    font-size: 15px;
+    font-weight: 600;
+  }
+ .lower{
+   
+   grid-area: lower;
+   display: flex;
+   align-items: center;   
+  justify-content: center;
+   justify-content: start;
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  border-radius: 15px;
+ transition: 0.2s ease;
+ background: rgba(255, 255, 255, 0.08);
+   backdrop-filter:blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+
+ }
+
+ .lower:hover{
+      transform: translateY(-2px);
+     box-shadow: inset 0 5px 15px rgba(255, 180, 0, 0.9);
+
+ }
+
+  .lowercontent{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     width: 220px;
+     font-weight: 100;
+     font-size: smaller;
+    
+ }
+ .lower span{
+  color: rgb(237, 112, 40);
+ }
+ 
+.lower img{
+  width: 240px;
+  height: 234px;
+  display: block;
+}
+.heading{
+  color: grey;
+}
+.btn{
+  width:140px;
+  border-radius: 22px;
+  height: 35px;
+  padding: 5px;
+border-color: rgb(237, 112, 40);
+  color: rgb(237, 112, 40);
+  background-color: black;
+  transition: 0.2s ease;
+
+  
+}
+.btn:hover{
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgba(255, 180, 0, 0.3);
+     cursor: pointer;
+}
+
+ .bottom{
+
+   grid-area: bottom;
+   display: flex;
+   justify-content: space-evenly;
+  font-size: 14px;
+ }
+
+  ul li:hover{
+    transform: translateY(-2px);
+    
+     cursor: pointer;
+    
+  
+}
+  ul li{
+     transition: 0.2s ease;
+  }
+ 
+.content ul {
+    display: flex;
+    gap: 30px;
+       
+  }
+
+
+  li::marker {
+  color: rgb(237, 112, 40);
+}
+
+h1{
+   color: white;
+   font-size: 35px;
+   font-weight: lighter;
+}
+h1, .logo{
+
+  height: 24px;
+  width: 170px;
+}
+
+ .btm{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     
+    
+ }
+ .account  img{
+     height: 26px;
+     width: 26px;
+
+ }
+.account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+ transition: 0.2s ease;
+}
+.account img:hover{  
+ transform: translateY(-2px);
+  cursor: pointer;
+
+}
+  .account span:hover{
+    transform: translateY(-2px);
+  cursor: pointer;
+  }
+
+.steam{
+  position: absolute;
+  z-index: 2;
+  left: 145px;
+     width: 22px;
+     height: 60px;
+     background: rgba(255, 255, 255, 0.4);
+
+     filter:blur(6px);
+     animation: steam 6s infinite ease-in-out;
+}
+
+@keyframes steam{
+  0%{
+    transform: translateY(10px)
+    translateX(0)
+    scale(1);
+    opacity: 0;
+  }
+  
+  40%{
+    opacity: 1;
+  }
+
+  100%{
+    transform: translateY(-50px)
+    /* translateX(15px) */
+    scale(2);
+    opacity: 0;
+  }
+}
+.steam{
+  left: 12%;
+  animation-delay:0s;
+
+}
+.steam2{
+    left: 18%;
+  animation-delay:0.9s
+  ;
+}
+.steam3{
+  animation-delay: 3s;
+}
